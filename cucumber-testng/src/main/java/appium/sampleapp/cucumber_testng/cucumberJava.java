@@ -16,7 +16,8 @@ public class cucumberJava {
 	
    @Given("^I have open the browser$") 
    public void openBrowser() { 
-	   System.setProperty("webdriver.chrome.driver", "C:\\Users\\varun_venkatesh\\workspace\\cucumber\\resources\\chromedriver.exe");
+	   String workingDir = System.getProperty("user.dir");
+	   System.setProperty("webdriver.chrome.driver", workingDir+"\\resources\\chromedriver.exe");
 	   driver = new ChromeDriver();
    } 
 	
