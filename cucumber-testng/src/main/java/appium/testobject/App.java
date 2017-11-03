@@ -53,30 +53,23 @@ public class App {
    
     	System.out.println("Executing add contacts application setup");
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        System.out.println(">>>>>>> 1");
         capabilities.setCapability("testobject_api_key", "C5734DB513204E3588440085869A9B8B");
-        System.out.println(">>>>>>> 2");
         //capabilities.setCapability("testobject_test_report_id", resultWatcher.getTestReportId());
         capabilities.setCapability("platformName", "Android");
-        System.out.println(">>>>>>> 3");
         capabilities.setCapability("testobject_device", "LG_Nexus_5X_free");
         capabilities.setCapability("appiumVersion","1.6.5");
         //capabilities.setCapability("phoneOnly", "false");
         //capabilities.setCapability("tabletOnly", "false");
         //capabilities.setCapability("privateDevicesOnly", "false");
         capabilities.setCapability("testobject_app_id",3);
-        System.out.println(">>>>>>> 4");
         //driver = new AndroidDriver(new URL("http://appium.testobject.com/wd/hub"), capabilities);
         driver = new AndroidDriver(new URL("https://us1.appium.testobject.com/wd/hub"), capabilities);
         //driver = new AndroidDriver<WebElement>(new URL("https://eu1.appium.testobject.com/wd/hub"), capabilities);
         //driver = new AndroidDriver<WebElement>(TestObjectCapabilities.TESTOBJECT_APPIUM_ENDPOINT, capabilities);
-        System.out.println(">>>>>>> 5");
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         resultWatcher.setAppiumDriver(driver);
         driver.launchApp();
-        System.out.println(">>>>>>> 6");
         log.info(testName.getMethodName() + " STARTING - Live view: " + driver.getCapabilities().getCapability("testobject_test_live_view_url"));
-        System.out.println(">>>>>>> 7");
     }
     
     
