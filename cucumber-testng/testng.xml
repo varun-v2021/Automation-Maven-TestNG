@@ -4,14 +4,10 @@
 	<test name="Test diary">
 		<packages>
 			<package name="appium.sampleapp.cucumber_testng" />
+			<package name="appium.testobject" />
 		</packages>
+		<!-- <classes> <class name="appium.testobject.App"></class> </classes> -->
 	</test>
-	<!-- 
-	<test name="Test">
-		<classes>
-			<class name="appium.sampleapp.cucumber_testng.RpnCalculatorStepdefs" />
-			<class name="appium.sampleapp.cucumber_testng.Entry" />
-		</classes>
-	</test>
-	 -->
+	<!-- <test name="Test"> <classes> <class name="appium.sampleapp.cucumber_testng.RpnCalculatorStepdefs" 
+		/> <class name="appium.sampleapp.cucumber_testng.Entry" /> </classes> </test> -->
 </suite> <!-- Suite -->
